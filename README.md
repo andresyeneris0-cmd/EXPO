@@ -1,21 +1,3 @@
-Go to the main content
-Google ClassroomClassroom
-ADSO 3230489
-A
-A
-Details of the task
-assignment
-Workshop 20 - BD Standardization - Data Dictionary
-Juan Carlos Ceballos Mendoza
-•
-23:05
-100 points
-Class Comments
-Your work
-Assigned
-Andres Yeneris - index.html
-HTML
-Private Comments
 
 <!DOCTYPE html>
 <html lang="es">

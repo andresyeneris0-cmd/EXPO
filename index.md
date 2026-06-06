@@ -5,22 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!--
-  ╔══════════════════════════════════════════════════════════════════════╗
-  ║           CARTELERA INTERACTIVA — PLANTILLA BASE                    ║
-  ║       Normalización y Diccionario de Datos · SENA ADSO             ║
-  ╠══════════════════════════════════════════════════════════════════════╣
-  ║  INSTRUCCIONES GENERALES                                            ║
-  ║  ─────────────────────────────────────────────────────────────────  ║
-  ║  1. Lean cada comentario <!-- ... --> antes de escribir contenido.  ║
-  ║  2. Nunca borren las etiquetas HTML, solo editen el TEXTO dentro.   ║
-  ║  3. Usen Live Server en VS Code para previsualizar en tiempo real.  ║
-  ║  4. Al terminar, súbanlo a GitHub Pages (Settings → Pages).        ║
-  ╚══════════════════════════════════════════════════════════════════════╝
+ 
   -->
 
-  <!-- ✏️ Cambia esto: título que aparece en la pestaña del navegador -->
-  <title>MI EXPO</title>
+  
+  <title>Mi Cartelera BD — SENA ADSO</title>
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -28,23 +18,31 @@
 
   <style>
     /* ──────────── VARIABLES — no modificar ──────────── */
-    :root {
-      --bg:        #000000;
-      --surface:   #b11b1b;
-      --card:      #142016;
-      --border:    #adb6af;
-      --green:     #337b97;
-      --green-lt:  #163faf;
-      --green-dim: #1d5700;
-      --text:      #dce8dd;
-      --text-2:    #8aab8e;
-      --text-3:    #4d6b51;
-      --code-bg:   #060d07;
-      --accent:    #a8ff78;
-      --warn:      #f5a623;
-      --red:       #e05252;
-      --white:     #f0f7f1;
-    }
+:root{
+  /* Fondo principal */
+  --bg: #0B1F3A;
+
+  /* Superficies */
+  --surface: #13294B;
+  --card: #1A335C;
+
+  /* Títulos y detalles */
+  --accent: #C1121F;
+  --border: #f20515;
+
+  /* Texto */
+  --text: #FFFFFF;
+  --text-2: #D6E4F0;
+  --text-3: #A9BCD0;
+
+  /* Colores auxiliares */
+  --green: #4CC9F0;
+  --green-lt: #90E0EF;
+  --warn: #F4A261;
+  --red: #E63946;
+  --white: #FFFFFF;
+}
+
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -141,12 +139,12 @@
     .sql-dots span:nth-child(1) { background: #ff5f57; }
     .sql-dots span:nth-child(2) { background: #febc2e; }
     .sql-dots span:nth-child(3) { background: #28c840; }
-    .sql-block pre { padding: 1.25rem 1.5rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .82rem; line-height: 1.7; color: #a3be8c; }
+    .sql-block pre { padding: 1.25rem 1.5rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: .82rem; line-height: 1.7; color: #1e201d; }
     .sql-block pre .kw  { color: #81a1c1; font-weight: 600; }
-    .sql-block pre .ty  { color: #8fbcbb; }
+    .sql-block pre .ty  { color: #0eadaa; }
     .sql-block pre .cn  { color: #ebcb8b; }
-    .sql-block pre .cm  { color: #4d6b51; font-style: italic; }
-    .sql-block pre .tb  { color: #88c0d0; }
+    .sql-block pre .cm  { color: #000000; font-style: italic; }
+    .sql-block pre .tb  { color: #60a9bd; }
 
     .steps { display: flex; flex-direction: column; gap: 0; position: relative; }
     .steps::before { content: ''; position: absolute; left: 1.15rem; top: 2.5rem; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--green), transparent); }
@@ -196,8 +194,8 @@
 <nav id="navbar">
   <a class="nav-logo" href="#hero">
     <!-- ✏️ Nombre corto -->
-    PROYECTO
-    <span>Bas</span>
+    MI CARTELERA
+    <span>Bases de Datos</span>
   </a>
   <div class="nav-links">
     <a href="#intro">Introducción</a>
@@ -211,7 +209,7 @@
 
 
 <!-- ════════════════════════════════════════════════════
-     SECCIÓN 1 — PORTADA (HERO)
+     SECCIÓN 1 — PORTADA (HERO) 
      ════════════════════════════════════════════════════
   QUÉ VA AQUÍ:
   La presentación de la cartelera: título, programa,
@@ -225,17 +223,18 @@
   ✏️  hero-subtitle → Una oración que resuma el tema.
   ✏️  meta-chip    → Programa, semestre/año, ciudad.
      ════════════════════════════════════════════════════ -->
-<div id="hero">
+<div id="hero">  
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-content reveal">
 
-    <div class="hero-badge">
+    <div class="hero-badge">3230489 
+      regional Bolívar
       <i class="fas fa-database"></i>
       <!-- ✏️ Ejemplo: SENA · Ficha 228118 · Regional Bolívar -->
     </div>
 
-    <h1 class="hero-title">
+    <h1 class="hero-title">Normalización y Diccionario de Datos · SENA ADSO
       <!-- ✏️ Ejemplo:
            Normalización<br>& <span class="hl">Diccionario</span><br>de Datos
       -->
@@ -248,22 +247,25 @@
     <div class="hero-meta">
       <div class="meta-chip">
         <i class="fas fa-code-branch"></i>
-        <!-- ✏️ Analisis y desarrollo de software-->
+        <!-- ✏️ Programa --> Analisis y Desarrollo de Software
       </div>
       <div class="meta-chip">
         <i class="fas fa-calendar-alt"></i>
-        <!-- ✏️ Semestre y año -->
+        <!-- ✏️ Semestre y año --> 3 SEMESTRE 2026
       </div>
       <div class="meta-chip">
         <i class="fas fa-map-marker-alt"></i>
-        <!-- ✏️ Cartagena , Bolivar -->
+        <!-- ✏️ Ciudad --> cartagena de indias
       </div>
     </div>
 
   </div>
-  <div class="scroll-hint"><i class="fas fa-chevron-down"></i> scroll</div>
-</div>
-
+   <br>
+ 
+    <img
+    src=https://whitestack.com/wp-content/uploads/2023/08/redundancia-datos.webp
+    alt="FincaApp"
+    style="width:55%; border-radius:23px; margin-bottom:10px;">
 
 <!-- ════════════════════════════════════════════════════
      SECCIÓN 2 — EQUIPO
@@ -288,29 +290,24 @@
     <div class="team-grid">
 
       <div class="team-card">
-        <div class="team-avatar"><!-- ✏️ Iniciales --></div>
+        <div class="team-avatar"><!-- ✏️ Iniciales --></div>AY
         <div>
-          <div class="team-name"><!-- ✏️ Andres yeneris--></div>
+          <div class="team-name"><!-- ✏️ Nombre completo --></div>ANDRES CAMILO YENERIS ORTIZ
+           
+           <div class="team-role"><!-- ✏️ Rol en el proyecto --></div>Investigacion 1FN y 2FN
           <div class="team-role"><!-- ✏️ Rol en el proyecto --></div>
         </div>
       </div>
 
       <div class="team-card">
-        <div class="team-avatar"><!-- ✏️ Iniciales --></div>
+        <div class="team-avatar"><!-- ✏️ Iniciales --></div>JG
         <div>
-          <div class="team-name"><!-- ✏️ Nombre completo --></div>
-          <div class="team-role"><!-- ✏️ Rol en el proyecto --></div>
+          <div class="team-name"><!-- ✏️ Nombre completo --></div>JEFER GARCIA
+          <div class="team-role"><!-- ✏️ Rol en el proyecto --></div>Investigacion 1FN y 2FN
         </div>
       </div>
 
-      <div class="team-card">
-        <div class="team-avatar"><!-- ✏️ Iniciales --></div>
-        <div>
-          <div class="team-name"><!-- ✏️ Nombre completo --></div>
-          <div class="team-role"><!-- ✏️ Rol en el proyecto --></div>
-        </div>
-      </div>
-
+      
       <!-- ✏️ Agrega o elimina tarjetas según el tamaño de tu grupo -->
 
     </div>
@@ -345,35 +342,40 @@
     <h2 class="section-title">¿Por qué normalizar?</h2>
 
     <p class="section-lead">
-      <!-- ✏️ Escribe aquí el párrafo introductorio -->
-    </p>
+    </p>La precisión de la información es crucial en las operaciones empresariales, y la gestión de bases de datos puede ayudar a garantizar su integridad. Utilizar y comprender la información de una base de datos estructurada puede ayudar a los departamentos a tomar decisiones prácticas. La normalización de datos puede mejorar la integridad de los datos de su empresa.
+
 
     <div class="grid-3">
 
-      <div class="card">
+      <div class="card">¿QUE ES LA REDUNDANCIA DE DATOS?
         <div class="card-icon"><i class="fas fa-question"></i></div>
         <!-- ✏️ Cambia el ícono, título y texto de cada tarjeta -->
-        <div class="card-title"><!-- ✏️ Concepto 1 --></div>
+        <div class="card-title"><!-- ✏️ Concepto 1 --></div>La redundancia de datos ocurre cuando se almacenan múltiples copias de los mismos datos en diferentes ubicaciones, formatos o sistemas.
         <p><!-- ✏️ Explicación breve del concepto 1 --></p>
       </div>
 
-      <div class="card">
+      <div class="card">¿QUE SON LAS ANOMALÍAS DE BD?
         <div class="card-icon"><i class="fas fa-question"></i></div>
-        <div class="card-title"><!-- ✏️ Concepto 2 --></div>
+        <div class="card-title"><!-- ✏️ Concepto 2 --></div>Las anomalías de bases de datos son problemas o inconsistencias imprevistas que ocurren al intentar modificar, insertar o eliminar datos en una base de datos relacional mal diseñada.
+
         <p><!-- ✏️ Explicación breve del concepto 2 --></p>
       </div>
 
-      <div class="card">
+      <div class="card">¿QUE ES LA INTEGRIDAD REFERENCIAL?
         <div class="card-icon"><i class="fas fa-question"></i></div>
-        <div class="card-title"><!-- ✏️ Concepto 3 --></div>
+        <div class="card-title"><!-- ✏️ Concepto 3 --></div>La integridad referencial es una propiedad y una regla de oro en el diseño de bases de datos relacionales que garantiza que las relaciones entre las tablas sigan siendo consistentes y válidas.
+
         <p><!-- ✏️ Explicación breve del concepto 3 --></p>
       </div>
+<video width="600" controls>
+    <source src=https://www.youtube.com/shorts/IubpCJje29w?feature=share type="video/mp4">
+</video>
 
     </div>
 
     <div class="callout info">
       <div class="callout-label"><i class="fas fa-lightbulb"></i> Definición formal</div>
-      <p><!-- ✏️ Escribe aquí la definición de normalización con tus propias palabras --></p>
+      <p><!-- ✏️ Escribe aquí la definición de normalización con tus propias palabras --></p>La normalización es poner orden y limpiar la casa en una base de datos. Consiste en tomar una tabla gigante donde todo está mezclado y amontonado, y separarla en varias tablas más pequeñas y organizadas, asegurándote de que cada tabla hable de una sola cosa (los clientes en un lado, los productos en otro, las facturas en otro).
     </div>
 
     <!-- ════ ANOMALÍAS ════
@@ -390,18 +392,31 @@
     </h3>
 
     <div class="callout warn">
+
+
       <div class="callout-label"><i class="fas fa-exclamation-triangle"></i> Anomalía de Inserción</div>
-      <p><!-- ✏️ Define la anomalía de inserción y da un ejemplo propio --></p>
+      <p><!-- ✏️ Define la anomalía de inserción y da un ejemplo propio --></p>Es un problema de diseño en bases de datos no normalizadas que impide registrar información nueva porque el sistema te obliga, de forma artificial, a conocer o inventar otros datos que aún no existen o no corresponden en ese momento. Ocurre principalmente cuando se mezclan dos entidades independientes en una sola tabla.
+
+Ejemplo propio:
+Imagina una tabla única llamada GIMNASIO donde se guardan al mismo tiempo los datos de los Miembros y de las Clases Grupales (como Yoga o Spinning).
+
     </div>
 
     <div class="callout warn">
       <div class="callout-label"><i class="fas fa-exclamation-triangle"></i> Anomalía de Actualización</div>
-      <p><!-- ✏️ Define la anomalía de actualización y da un ejemplo propio --></p>
+      <p><!-- ✏️ Define la anomalía de actualización y da un ejemplo propio --></p>Es una inconsistencia que ocurre en bases de datos mal diseñadas cuando un dato que está duplicado en varias filas (debido a la redundancia) se modifica en algunos registros pero no en todos. Como resultado, la base de datos queda en un estado contradictorio donde coexisten dos o más versiones diferentes de una misma realidad, perdiendo por completo la integridad y la confiabilidad de la información.
+
+Ejemplo propio:
+Imagina una tabla llamada VETERINARIA donde se registran las citas médicas de las mascotas. En la misma tabla se mezclan los datos de la mascota y los datos de contacto de su dueño:
     </div>
 
     <div class="callout error">
       <div class="callout-label"><i class="fas fa-times-circle"></i> Anomalía de Eliminación</div>
-      <p><!-- ✏️ Define la anomalía de eliminación y da un ejemplo propio --></p>
+      <p><!-- ✏️ Define la anomalía de eliminación y da un ejemplo propio --></p>Es un problema de diseño en bases de datos no normalizadas que ocurre cuando, al borrar un registro que legítimamente se desea eliminar, se pierde de forma accidental e irreversible información completamente diferente que se quería conservar. Esto sucede porque se han mezclado dos entidades distintas en una sola tabla, haciendo que la existencia de un dato dependa obligatoriamente de la existencia del otro.
+
+Ejemplo propio:
+Imagina una tabla llamada FINCA_GANADERA donde se registra el inventario de los animales y el lote (potrero) donde están pastando actualmente. En la misma tabla se guarda el nombre del lote y la condición del suelo (si tiene buen pasto o necesita fertilización
+
     </div>
 
   </div>
@@ -439,21 +454,29 @@
       El caso: <span style="color:var(--green)"><!-- ✏️ Nombre de su caso --></span>
     </h2>
 
-    <p class="section-lead">
+    <p class="section-lead">Fincapp
       <!-- ✏️ Describan el negocio: qué hace, dónde está, cuál es el problema de datos -->
-    </p>
+    </p>FincaApp es una plataforma diseñada para que los productores ganaderos lleven el control de sus animales (inventario de ganado, pesos y tipos) y de los lotes de tierra (potreros) donde estos pastan.
+<p class="section-lead">Problema:
+
+
+    El problema se encuentra en la estructura del registro. Al diseñar la base de datos, se definió que cada fila (renglón) de la tabla representa a un Animal, pero dentro de esa misma fila se metieron a la fuerza los datos del Lote (Potrero).
+
+
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <!-- ✏️ Define tus propias columnas. Ejemplo mínimo: 8-10 campos -->
-            <th>campo_1</th>
-            <th>campo_2</th>
-            <th>campo_3</th>
-            <th>campo_4</th>
-            <th>campo_5</th>
-            <th>campo_6</th>
+            <th>id_animal
+               (Clave)</th>
+            <th>tipo_animal
+              
+            </th>
+            <th>peso_kg</th>
+            <th>id_lote</th>
+            <th>condicion_suelo</th>
             <!-- ✏️ Agrega o elimina columnas según tu caso -->
           </tr>
         </thead>
@@ -462,11 +485,19 @@
                Las celdas con múltiples valores sepáralas con coma.
                Usa style="color:var(--warn)" para resaltar los problemas 1FN
                y style="color:var(--red)" para los problemas de redundancia -->
-          <tr class="row-hint">
-            <td colspan="6">✏️ Reemplaza esta fila con tus datos reales</td>
+             <tr class="row-hint"></tr>
+          <td colspan="6"> 
+              <p class="row-hint"> A-02,&nbsp;&nbsp;&nbsp;&nbsp; Vaca &nbsp;&nbsp;&nbsp;&nbsp; 500 &nbsp;&nbsp;&nbsp;&nbsp;, Lote 1 &nbsp;&nbsp;&nbsp;&nbsp;Texto1&nbsp;&nbsp;&nbsp;&nbsp;Texto2Buen pasto</p>
+              <p class="row-hint"> A-03, Toro , 750 , Lote 1 , Buen pasto</p>
+            </td>
+
+            <td class="row-hint" colspan="6"> </td>
           </tr>
-          <tr class="row-hint">
-            <td colspan="6">✏️ Agrega al menos 4 filas de ejemplo</td>
+          <tr class="row-hint"></tr>
+            <td colspan="6"> 
+              <p class="white-hint"> A-01, Vaca , 450 , Lote 2 , Necesita fertilización</p>
+               <p class="white-hint"> A-04, Cabra , 150 , Lote 2 , Necesita fertilización</p>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -534,11 +565,12 @@
           <div class="fn-title"><!-- ✏️ Primera Forma Normal --></div>
           <div class="fn-rule">
             <i class="fas fa-check-circle"></i>
-            <!-- ✏️ Escribe la regla de la 1FN en una línea -->
+            <!-- ✏️ Escribe la regla de la 1FN en una línea -->Cada columna debe contener un solo valor (dato atómico).
           </div>
           <p style="color:var(--text-2); font-size:.95rem">
             <!-- ✏️ Explica con tus propias palabras qué es la 1FN
-                     y qué problema resuelve en su caso -->
+                     y qué problema resuelve en su caso -->La Primera Forma Normal (1FN) consiste en organizar los datos de manera que cada columna contenga un solo valor y no existan grupos repetidos. En el caso de FincaApp, ayuda a mantener la información ordenada y fácil de consultar, evitando que se almacenen varios datos en una misma celda y reduciendo errores al registrar animales y lotes.
+
           </p>
         </div>
       </div>
@@ -548,21 +580,33 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-title"><!-- ✏️ Título del paso 1 --></div>
-            <p><!-- ✏️ Descripción del paso 1 aplicado a su caso --></p>
+            <p><!-- ✏️ Descripción del paso 1 aplicado a su caso --></p>1FN — Primera Forma Normal
+Cada columna debe contener un solo valor (dato atómico).
+No deben existir grupos repetitivos.
+Cada registro debe ser único.
+
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
             <div class="step-title"><!-- ✏️ Título del paso 2 --></div>
-            <p><!-- ✏️ Descripción del paso 2 aplicado a su caso --></p>
+            <p><!-- ✏️ Descripción del paso 2 aplicado a su caso --></p>2FN — Segunda Forma Normal
+Debe cumplir la 1FN.
+Todos los atributos deben depender completamente de la clave primaria.
+Elimina dependencias parciales.
+
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
             <div class="step-title"><!-- ✏️ Título del paso 3 --></div>
-            <p><!-- ✏️ Descripción del paso 3 aplicado a su caso --></p>
+            <p><!-- ✏️ Descripción del paso 3 aplicado a su caso --></p>3FN: 3FN — Tercera Forma Normal
+Debe cumplir la 2FN.
+Los atributos no clave deben depender únicamente de la clave primaria.
+Elimina dependencias transitivas y reduce la redundancia de datos.
+
           </div>
         </div>
         <!-- ✏️ Agrega más pasos si tu caso los necesita -->
@@ -575,6 +619,7 @@
               <!-- ✏️ Escribe los encabezados de tu tabla en 1FN.
                        Recuerda: la PK es compuesta, márcala con * -->
               <th>campo_pk_1 *</th>
+              
               <th>campo_pk_2 *</th>
               <th>campo_3</th>
               <th>campo_4</th>
@@ -614,11 +659,12 @@
           <div class="fn-title"><!-- ✏️ Segunda Forma Normal --></div>
           <div class="fn-rule">
             <i class="fas fa-check-circle"></i>
-            <!-- ✏️ Escribe la regla de la 2FN en una línea -->
+            <!-- ✏️ Escribe la regla de la 2FN en una línea -->Debe cumplir la 1FN y todos los atributos deben depender completamente de la clave primaria.
           </div>
           <p style="color:var(--text-2); font-size:.95rem">
             <!-- ✏️ Explica con tus propias palabras qué es la 2FN -->
-          </p>
+          </p>La Segunda Forma Normal (2FN) es una regla de normalización que busca que todos los datos de una tabla dependan completamente de la clave primaria. Esto significa que no debe haber información que dependa solo de una parte de la clave o de otro atributo. Su objetivo es reducir la redundancia de datos y evitar inconsistencias en la base de datos.
+
         </div>
       </div>
 
@@ -1025,6 +1071,3 @@
 
 </body>
 </html>
-
-Andres Yeneris - index.html
-Mostrando Andres Yeneris - index.html.
